@@ -1,0 +1,30 @@
+<head>
+  <title>demoPublish</title>
+</head>
+
+<body>
+	{{> nameSelection}}
+	<hr/>
+	{{> mainTemplate}}
+	<hr/>
+	{{> addItem}}
+</body>
+
+<template name="nameSelection">
+	<select>
+		<option value="bob">bob</option>
+		<option value="nico">nico</option>
+		<option value="marie">marie</option>
+	</select>
+</template>
+
+<template name="mainTemplate">
+	{{#each items}}
+		{{name}}<br/>
+	{{/each}}
+</template>
+
+<template name="addItem">
+	<input type="text"></input>
+	<button>Add item</button>
+</template>
